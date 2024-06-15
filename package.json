@@ -1,11 +1,34 @@
 {
-  "name": "node-app-template",
+  "name": "@artie-owlet/node-app-template",
+  "version": "0.0.1-dev.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-release": "tsc -p tsconfig-release.json",
+    "build-tests": "yarn tsc -p test/tsconfig.json --noEmit",
+    "clean": "rm -rf build/",
+    "coverage": "c8 yarn test",
+    "doc": "typedoc",
+    "lint": "eslint src/",
+    "start": "node dist/index.js",
+    "test": "mocha test/",
+    "test-release": "yarn build-tests && c8 mocha --config .mocharc-release.yml test/"
+  },
   "packageManager": "yarn@4.3.0",
   "devDependencies": {
-    "@eslint/js": "^9.4.0",
-    "@types/eslint__js": "^8.42.3",
+    "@eslint/js": "^8",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^20.14.2",
-    "eslint": "^9.4.0",
+    "c8": "^10.1.2",
+    "eslint": "^8",
+    "mocha": "^10.4.0",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.13.0"
   }

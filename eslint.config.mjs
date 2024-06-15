@@ -21,11 +21,31 @@ export default tseslint.config(
     },
     {
         ignores: [
-            'eslint.config.mjs',
+            '*.cjs',
+            '*.mjs',
         ]
     },
     {
         rules: {
+            '@typescript-eslint/no-confusing-void-expression': [
+                'error',
+                {
+                    ignoreArrowShorthand: true,
+                },
+            ],
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                {
+                    argsIgnorePattern: '^_',
+                },
+            ],
+            '@typescript-eslint/restrict-template-expressions': [
+                'error',
+                {
+                    allowBoolean: true,
+                    allowNumber: true,
+                },
+            ],
             'no-console': 'error',
         }
     },
