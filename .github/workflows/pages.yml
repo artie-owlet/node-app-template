@@ -18,7 +18,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/setup-yarn.yaml
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       - run: yarn doc
       - uses: actions/upload-pages-artifact@v3
         with:

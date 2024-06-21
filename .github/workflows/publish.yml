@@ -6,7 +6,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/setup-yarn.yaml
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       - run: yarn build-release
       - run: yarn npm publish
         env:
