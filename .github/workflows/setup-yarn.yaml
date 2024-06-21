@@ -1,6 +1,6 @@
 name: setup-yarn
 on:
-  workflow-call:
+  workflow_call:
 jobs:
   setup-yarn:
     runs-on: ubuntu-latest
