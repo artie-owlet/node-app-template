@@ -6,6 +6,12 @@
   "extension": [
     ".ts"
   ],
+  "include": [
+    "src/"
+  ],
+  "exclude": [
+    "src/index.ts"
+  ],
   "check-coverage": true,
   "per-file": true,
   "statements": 100,

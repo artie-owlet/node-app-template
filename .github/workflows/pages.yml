@@ -19,12 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: yarn
-      - run: corepack enable yarn
-      - run: yarn
+      - uses: ./.github/actions/setup
       - run: yarn doc
       - uses: actions/upload-pages-artifact@v3
         with:
