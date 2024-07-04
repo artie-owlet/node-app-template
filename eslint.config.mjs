@@ -1,6 +1,7 @@
 // @ts-check
 
 import eslint from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -16,14 +17,22 @@ export default tseslint.config(
         },
     },
     {
-        files: ['**/*.js'],
+        files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
         ...tseslint.configs.disableTypeChecked,
     },
     {
         ignores: [
-            '*.cjs',
-            '*.mjs',
-        ]
+            '.pnp.cjs',
+            '.pnp.loader.mjs',
+        ],
+    },
+    {
+        files: ['eslint.config.mjs'],
+        languageOptions: {
+            parserOptions: {
+                project: './tsconfig-base.json',
+            },
+        },
     },
     {
         rules: {
@@ -47,6 +56,54 @@ export default tseslint.config(
                 },
             ],
             'no-console': 'error',
-        }
+        },
+    },
+    stylistic.configs['all-flat'],
+    {
+        rules: {
+            '@stylistic/array-bracket-newline': [
+                'error',
+                'consistent',
+            ],
+            '@stylistic/array-element-newline': [
+                'error',
+                {
+                    consistent: true,
+                    multiline: true,
+                },
+            ],
+            '@stylistic/comma-dangle': ['error', 'always-multiline'],
+            '@stylistic/function-call-argument-newline': ['error', 'consistent'],
+            '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
+            '@stylistic/indent-binary-ops': ['error', 4],
+            '@stylistic/lines-between-class-members': [
+                'error',
+                {
+                    enforce: [
+                        { blankLine: 'always', prev: '*', next: 'method' },
+                        { blankLine: 'always', prev: 'method', next: '*' },
+                    ],
+                },
+            ],
+            '@stylistic/max-len': [
+                'error',
+                {
+                    code: 120,
+                },
+            ],
+            '@stylistic/multiline-comment-style': 'off',
+            '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+            '@stylistic/object-curly-spacing': ['error', 'always'],
+            '@stylistic/object-property-newline': [
+                'error',
+                {
+                    allowAllPropertiesOnSameLine: true,
+                },
+            ],
+            '@stylistic/quotes': ['error', 'single'],
+            '@stylistic/quote-props': ['error', 'as-needed'],
+            '@stylistic/padded-blocks': ['error', 'never'],
+            '@stylistic/space-before-function-paren': ['error', 'never'],
+        },
     },
 );
