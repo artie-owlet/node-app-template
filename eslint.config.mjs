@@ -125,13 +125,6 @@ export default tseslint.config(
 
             'no-console': 'error',
             'no-duplicate-imports': 'error',
-            'no-restricted-syntax': [
-                'error',
-                {
-                    selector: 'NewExpression[callee.name="Map"]',
-                    message: 'Use "JsonMap" instead',
-                },
-            ],
         },
     },
     {
