@@ -21,7 +21,7 @@
     "test": "mocha test/",
     "test-release": "yarn build-tests && c8 mocha --config .mocharc-release.yml test/"
   },
-  "packageManager": "yarn@4.3.1",
+  "packageManager": "yarn@4.5.3",
   "devDependencies": {
     "@artie-owlet/chifir": "^2.0.0",
     "@eslint/js": "^8",
