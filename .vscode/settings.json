@@ -7,8 +7,10 @@
   "eslint.nodePath": ".yarn/sdks",
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "todohighlight.keywords": [{
-    "text": "NOTE",
-    "backgroundColor": "green"
-  }]
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE",
+      "backgroundColor": "green"
+    }
+  ]
 }
