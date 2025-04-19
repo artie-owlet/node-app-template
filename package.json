@@ -17,6 +17,9 @@
     "doc": "typedoc",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/",
+    "postinstall": "husky",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
     "start": "node dist/index.js",
     "test": "mocha test/",
     "test-release": "yarn build-tests && c8 mocha --config .mocharc-release.yml test/"
@@ -24,6 +27,8 @@
   "packageManager": "yarn@4.9.1",
   "devDependencies": {
     "@artie-owlet/chifir": "^2.0.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.25.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/mocha": "^10.0.10",
@@ -32,7 +37,9 @@
     "c8": "^10.1.3",
     "eslint": "^9.25.0",
     "eslint-plugin-perfectionist": "^4.11.0",
+    "husky": "^9.1.7",
     "mocha": "^11.1.0",
+    "pinst": "^3.0.0",
     "ts-node": "^10.9.2",
     "typedoc": "^0.28.2",
     "typescript": "^5.8.3",
