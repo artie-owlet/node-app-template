@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "nodenext",
     "lib": [
       "esnext"
     ],
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "declaration": true,

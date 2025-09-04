@@ -1,0 +1,21 @@
+{
+    "$schema": "https://nodejs.org/dist/v24.7.0/docs/node-config-schema.json",
+    "nodeOptions": {
+        "import": [
+            "tsx"
+        ]
+    },
+    "testRunner": {
+        "test-reporter": "spec",
+        "experimental-test-coverage": true,
+        "test-coverage-include": [
+            "src/"
+        ],
+        "test-coverage-exclude": [
+            "src/index.ts"
+        ],
+        "test-coverage-lines": 100,
+        "test-coverage-branches": 100,
+        "test-coverage-functions": 100
+    }
+}

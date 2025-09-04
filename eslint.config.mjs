@@ -3,13 +3,14 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import perfectionist from 'eslint-plugin-perfectionist';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig([
     eslint.configs.recommended,
     stylistic.configs['all'],
-    ...tseslint.configs.strictTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
+    tseslint.configs.strictTypeChecked,
+    tseslint.configs.stylisticTypeChecked,
     {
         languageOptions: {
             parserOptions: {
@@ -104,7 +105,15 @@ export default tseslint.config(
             ],
             '@stylistic/quote-props': ['error', 'as-needed'],
             '@stylistic/padded-blocks': ['error', 'never'],
-            '@stylistic/space-before-function-paren': ['error', 'never'],
+            '@stylistic/space-before-function-paren': [
+                'error',
+                {
+                    anonymous: 'always',
+                    asyncArrow: 'always',
+                    named: 'never',
+                    catch: 'never',
+                },
+            ],
             '@stylistic/newline-per-chained-call': [
                 'error',
                 {
@@ -152,4 +161,4 @@ export default tseslint.config(
             '@typescript-eslint/no-unsafe-declaration-merging': 'off',
         },
     },
-);
+]);

@@ -1,10 +1,11 @@
 name: setup
+description: setup node and yarn
 runs:
   using: composite
   steps:
     - uses: actions/setup-node@v4
       with:
-        node-version: '22'
+        node-version: '24'
     - run: corepack enable yarn
       shell: bash
     - run: yarn
