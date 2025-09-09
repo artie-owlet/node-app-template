@@ -54,6 +54,7 @@ export default defineConfig([
                 'error',
                 {
                     argsIgnorePattern: '^_',
+                    destructuredArrayIgnorePattern: '^_',
                 },
             ],
             '@typescript-eslint/restrict-template-expressions': [
