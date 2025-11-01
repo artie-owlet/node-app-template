@@ -23,7 +23,7 @@
     "test": "node --disable-warning=ExperimentalWarning --test --experimental-config-file=test.config.json test/**/*.ts",
     "test-release": "yarn build-tests && yarn test"
   },
-  "packageManager": "yarn@4.9.4",
+  "packageManager": "yarn@4.10.3",
   "devDependencies": {
     "@artie-owlet/chifir": "^2.0.0",
     "@commitlint/cli": "^19.8.1",
