@@ -155,11 +155,4 @@ export default defineConfig([
             },
         },
     },
-    {
-        files: ['src/components/*.ts'],
-        rules: {
-            '@typescript-eslint/no-extraneous-class': 'off',
-            '@typescript-eslint/no-unsafe-declaration-merging': 'off',
-        },
-    },
 ]);
