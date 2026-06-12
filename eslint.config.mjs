@@ -14,8 +14,7 @@ export default defineConfig([
     {
         languageOptions: {
             parserOptions: {
-                project: true,
-                tsconfigRootDir: import.meta.dirname,
+                projectService: true,
             },
         },
         plugins: {
@@ -126,9 +125,9 @@ export default defineConfig([
                 'error',
                 {
                     groups: [
-                        ['builtin', 'builtin-type'],
-                        ['external', 'external-type'],
-                        ['parent', 'sibling', 'parent-type', 'sibling-type'],
+                        ['builtin', 'type-builtin'],
+                        ['external', 'type-external'],
+                        ['parent', 'sibling', 'type-parent', 'type-sibling'],
                     ],
                 },
             ],

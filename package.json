@@ -23,22 +23,22 @@
     "test": "node --disable-warning=ExperimentalWarning --test --experimental-config-file=test.config.json test/**/*.ts",
     "test-release": "yarn build-tests && yarn test"
   },
-  "packageManager": "yarn@4.10.3",
+  "packageManager": "yarn@4.16.0",
   "devDependencies": {
     "@artie-owlet/chifir": "^2.0.0",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.34.0",
-    "@stylistic/eslint-plugin": "^5.3.1",
-    "@types/node": "^24.3.1",
-    "@typescript-eslint/types": "^8.42.0",
-    "eslint": "^9.34.0",
-    "eslint-plugin-perfectionist": "^4.15.0",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^24.13.2",
+    "@typescript-eslint/types": "^8.61.0",
+    "eslint": "^10.4.1",
+    "eslint-plugin-perfectionist": "^5.9.0",
     "husky": "^9.1.7",
     "pinst": "^3.0.0",
-    "tsx": "^4.20.5",
-    "typedoc": "^0.28.12",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0"
+    "tsx": "^4.22.4",
+    "typedoc": "^0.28.19",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0"
   }
 }
