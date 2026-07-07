@@ -1,12 +1,12 @@
 name: setup
-description: setup node and yarn
+description: setup node and pnpm
 runs:
   using: composite
   steps:
     - uses: actions/setup-node@v4
       with:
         node-version: '24'
-    - run: corepack enable yarn
+    - run: corepack enable pnpm
       shell: bash
-    - run: yarn
+    - run: pnpm install
       shell: bash
