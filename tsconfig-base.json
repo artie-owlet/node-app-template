@@ -11,6 +11,8 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,

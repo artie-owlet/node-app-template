@@ -42,10 +42,10 @@ export default defineConfig([
                     allow: ['overrideMethods'],
                 },
             ],
-            '@typescript-eslint/no-empty-interface': [
+            '@typescript-eslint/no-empty-object-type': [
                 'error',
                 {
-                    allowSingleExtends: true,
+                    allowInterfaces: 'with-single-extends',
                 },
             ],
             '@typescript-eslint/no-shadow': 'error',
@@ -63,6 +63,9 @@ export default defineConfig([
                     allowNumber: true,
                 },
             ],
+            '@typescript-eslint/switch-exhaustiveness-check': [
+                'error',
+            ],
 
             '@stylistic/array-bracket-newline': [
                 'error',
@@ -76,6 +79,7 @@ export default defineConfig([
                 },
             ],
             '@stylistic/comma-dangle': ['error', 'always-multiline'],
+            '@stylistic/dot-location': ['error', 'property'],
             '@stylistic/function-call-argument-newline': ['error', 'consistent'],
             '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
             '@stylistic/indent-binary-ops': ['error', 4],
@@ -88,7 +92,7 @@ export default defineConfig([
                 },
             ],
             '@stylistic/multiline-comment-style': 'off',
-            '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+            '@stylistic/multiline-ternary': 'off',
             '@stylistic/object-curly-spacing': ['error', 'always'],
             '@stylistic/object-property-newline': [
                 'error',
